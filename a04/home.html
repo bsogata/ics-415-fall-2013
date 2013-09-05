@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>This is a title.</title>
+  <!-- 
+    This developer was uncertain whether it was better to put the CSS in a separate file 
+    or place everything in the two HTML files; since the instructions only mentioned uploading
+    HTML files, the developer decided to place the CSS here.
+  -->
+  <style>
+    html
+    {
+      height: 100%;
+    }
+    body
+    {
+      height: 100%;
+    }
+    table.layout
+    {
+      width: 100%;
+      height: 100%;
+    }
+    table.layout > thead
+    {
+      height: 25%;
+    }
+    table.layout > tbody > tr > td, table.layout > thead > tr > td, table.layout > tfoot > tr > td
+    {
+      border: 1px solid black;
+    }
+    .navbar
+    {
+      height: 50px;
+      background-color: #A0A0A0;
+    }
+    .header
+    {
+      background-color: #0000FF;
+    }
+    .sidebar
+    {
+      width: 25%;
+      vertical-align: top;
+    }
+    .footer
+    {
+      height: 50px;
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+    table[class=bordered-table], table[class=bordered-table] th, table[class=bordered-table] td
+    {
+      border: 1px solid black;
+    }
+    .main
+    {
+      background-image: url('img/cat.jpg');
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  </style>
+</head>
+<body>
+  <table class="layout">
+    <thead>
+      <tr class="header">
+        <td colspan="2">
+          <h1>This is a title</h1>
+        </td>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr class="footer">
+        <td colspan="2" align="center">Copyright Branden Ogata, who is too tired to think of an amusing punishment for those who violate this copyright.</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr class="navbar">
+        <td colspan="2">
+          <a href="home.html">Home</a>
+          <a href="forms.html">Forms</a>
+        </td>
+      </tr>    
+      <tr>
+        <td class="sidebar">
+          <h3>Home Summary Window</h3>
+          <p>
+            This is the sidebar describing the contents in the main area to the right.
+          </p>
+        </td>
+        <td class="main">
+          <h2>Home Page</h2>
+          <p>Tables:</p>
+          <table>
+            <caption>Borderless Table</caption>
+            <tr>
+              <th>Header</th>
+            </tr>
+            <tr>
+              <td>Cell</td>
+            </tr>
+          </table>
+          
+          <table class="bordered-table">
+            <caption>Bordered Table</caption>
+            <thead>
+              <tr>
+                <th>Header 0</th>
+                <th>Header 1</th>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <td>Footer 0</td>
+                <td>Footer 1</td>
+              </tr>
+            </tfoot>
+            <tbody>
+              <tr>
+                <td>Cell 0, 0</td>
+                <td>Cell 1, 0</td>
+              </tr>
+              <tr>
+                <td>Cell 0, 1</td>
+                <td>Cell 1, 1</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p>Lists:</p>
+          <ul>
+            <li>Iced tea</li>
+            <li>"Iced Tea"</li>
+          </ul>
+          
+          <ol>
+            <li>Iced tea</li>
+            <li>"Iced Tea"</li>          
+          </ol>
+          
+          <dl>
+            <dt>Iced tea</dt>
+              <dd>- light brown cold drink</dd>
+            <dt>"Iced Tea"</dt>
+              <dd>
+                - dark brown cold viscous liquid that has been proven to kill small insects 
+                  due to sugar overdose since Branden cannot measure
+              </dd>            
+          </dl>
+          
+          <p>
+            This is a description of the contents above.
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

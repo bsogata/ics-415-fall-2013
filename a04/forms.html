@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>This is a title.</title>
+  <!-- 
+    This developer was uncertain whether it was better to put the CSS in a separate file 
+    or place everything in the two HTML files; since the instructions only mentioned uploading
+    HTML files, the developer decided to place the CSS here.
+  -->
+  <style>
+    html
+    {
+      height: 100%;
+    }
+    body
+    {
+      height: 100%;
+    }
+    table.layout
+    {
+      width: 100%;
+      height: 100%;
+    }
+    table.layout > thead
+    {
+      height: 25%;
+    }
+    table.layout > tbody > tr > td, table.layout > thead > tr > td, table.layout > tfoot > tr > td
+    {
+      border: 1px solid black;
+    }
+    .navbar
+    {
+      height: 50px;
+      background-color: #A0A0A0;
+    }
+    .header
+    {
+      background-color: #0000FF;
+    }
+    .sidebar
+    {
+      width: 25%;
+      vertical-align: top;
+    }
+    .footer
+    {
+      height: 50px;
+      background-color: #000000;
+      color: #FFFFFF;
+    }
+    table[class=bordered-table], table[class=bordered-table] th, table[class=bordered-table] td
+    {
+      border: 1px solid black;
+    }
+    .main
+    {
+      background-image: url('img/cat.jpg');
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  </style>  
+</head>
+<body>
+  <table class="layout">
+    <thead>
+      <tr class="header">
+        <td colspan="2">
+          <h1>This is a title</h1>
+        </td>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr class="footer">
+        <td colspan="2" align="center">Copyright Branden Ogata, who is too tired to think of an amusing punishment for those who violate this copyright.</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr class="navbar">
+        <td colspan="2">
+          <a href="home.html">Home</a>
+          <a href="forms.html">Forms</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="sidebar">
+          <h3>Forms Summary Window</h3>
+          <p>
+            This is <i>still</i> the sidebar describing the contents in the main area to the right.
+          </p>
+        </td>
+        <td class="main">
+          <h2>Forms Page</h2>
+          <form name="input" action="forms.html" method="get">
+            User Name: <input type="text" name="username" /><br />
+            Password: <input type="password" name="password" /><br />
+            <br />
+            Sex:<br />
+              Male<input type="radio" name="sex" value="male" />
+              Female<input type="radio" name="sex" value="female" />
+            <br />
+            <br />
+            Transportation:<br />
+              Bike<input type="checkbox" name="transportation" value="bike" />
+              Car<input type="checkbox" name="transportation" value="car" />
+              Helicopter<input type="checkbox" name="transportation" value="helicopter" />
+            <br />
+            <!-- HTML5 inputs -->
+            Color<input type="color" name="prefcolor" /><br />
+            Date<input type="date" name="date" /><br />
+            Datetime<input type="datetime" name="datetime" /><br />
+            Email<input type="email" name="email" /><br />
+            Month<input type="month" name="month" /><br />
+            Number<input type="number" name="number" /><br />
+            Range<input type="range" name="range" min="1" max="8"/><br />
+            Search<input type="search" name="search" /><br />
+            URL<input type="url" name="url" /><br />
+
+            
+            <br />
+            <input type="submit" value="Submit" />
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
