@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>This is a title.</title>
+  <!-- 
+    This developer was uncertain whether it was better to put the CSS in a separate file 
+    or place everything in the two HTML files; since the instructions only mentioned uploading
+    HTML files, the developer decided to place the CSS here.
+  -->
+  <style>
+    html
+    {
+      height: 100%;
+    }
+    body
+    {
+      height: 100%;
+    }
+    header
+    {
+      height: 25%;
+      background-color: #0000FF;
+    }
+    nav
+    {
+      height: 50px;
+      background-color: #A0A0A0;
+    }
+    aside
+    {
+      width: 25%;
+      vertical-align: top;
+      display: table-cell;
+    }
+    footer
+    {
+      height: 50px;
+      background-color: #000000;
+      color: #FFFFFF;
+      clear: both;
+      text-align: center;
+    }
+    table[class=bordered-table], table[class=bordered-table] th, table[class=bordered-table] td
+    {
+      border: 1px solid black;
+    }
+    section
+    {
+      background-image: url('img/cat.jpg');
+      background-repeat: no-repeat;
+      background-position: right;
+      display: table-cell;
+    }
+    header, nav, section, aside, footer
+    {
+      border: 1px solid #A0A0A0;
+    }
+    .container
+    {
+      display: table;
+    }
+  </style>  
+</head>
+<body>
+  <header>
+    <h1>This is a title</h1>
+  </header>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="forms.html">Forms</a>
+    <a href="frames.html">Frames</a>
+  </nav>
+  <div class="container">
+    <aside>
+      <h3>Forms Summary Window</h3>
+      <p>
+        This is <i>still</i> the sidebar describing the contents in the main area to the right.
+      </p>
+    </aside>
+    <section>
+      <h2>Forms Page</h2>
+      <form name="input" action="forms.html" method="get">
+        User Name: <input type="text" name="username" /><br />
+        Password: <input type="password" name="password" /><br />
+        <br />
+        Sex:<br />
+          Male<input type="radio" name="sex" value="male" />
+          Female<input type="radio" name="sex" value="female" />
+        <br />
+        <br />
+        Transportation:<br />
+          Bike<input type="checkbox" name="transportation" value="bike" />
+          Car<input type="checkbox" name="transportation" value="car" />
+          Helicopter<input type="checkbox" name="transportation" value="helicopter" />
+        <br />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+  </div>
+  <footer>
+    Copyright Branden Ogata, who is too tired to think of an amusing punishment for those who violate this copyright.
+  </footer>  
+</body>
+</html>
