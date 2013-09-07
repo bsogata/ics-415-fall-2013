@@ -1,0 +1,178 @@
+/*
+ * Questions:
+ *  In ‘wide’ screen mode, what causes the content and sidebar to be side-by-side?
+ *    If the width is greater than 980px, the content has a width of 670px and the
+ *    sidebar has a width of 280px, which sums to 950px.  950px is less than 980px,
+ *    thus the content and sidebar can fit into the same "row" and are placed side-
+ *    by-side.  
+ *  In the ‘fluid’ mode, what are the widths of the content and sidebar
+ *    In the smaller than 980px case, the content has a width of 60% and the 
+ *    sidebar has a width of 30%, which is still less than 100%.
+ *  How does the CSS Media Query force a single column layout for narrow screens?
+ *    In the smaller than 650px case, the content width is set to auto and the
+ *    sidebar is given a width of 100%, making it impossible for the two elements
+ *    to fit on the same row.
+ *  How would you support more than two columns in the ‘wide’ and ‘fluid’ mode?
+ *    It would be necessary to reduce the width allocated to the existing content
+ *    and sidebar, providing more space to insert a new column.  This is in fact
+ *    reflected in the code below and in style.css.
+ */
+
+/************************************************************************************
+smaller than 980
+*************************************************************************************/
+@media screen and (max-width: 980px) {
+
+	/* pagewrap */
+	#pagewrap {
+		width: 95%;
+	}
+
+	/* content */
+	#content {
+		width: 50%;
+		padding: 3% 4%;
+	}
+
+	/* sidebar */
+	#sidebar {
+		width: 20%;
+	}
+	#sidebar .widget {
+		padding: 8% 7%;
+		margin-bottom: 10px;
+	}
+  
+  /* sidebar-flickr-left */
+  #sidebar-flickr-left {
+    width: 20%;
+  }
+	#sidebar-flickr-left.widget {
+		padding: 8% 7%;
+		margin-bottom: 10px;
+	}  
+
+	/* embedded videos */
+	.video embed,
+	.video object,
+	.video iframe {
+		width: 100%;
+		height: auto;
+		min-height: 300px;
+	}
+
+}
+
+/************************************************************************************
+smaller than 650
+*************************************************************************************/
+@media screen and (max-width: 650px) {
+
+	/* header */
+	#header {
+		height: auto;
+	}
+
+	/* search form */
+	#searchform {
+		position: absolute;
+		top: 5px;
+		right: 0;
+		z-index: 100;
+		height: 40px;
+	}
+	#searchform #s {
+		width: 70px;
+	}
+	#searchform #s:focus {
+		width: 150px;
+	}
+
+	/* main nav */
+	#main-nav {
+		position: static;
+	}
+
+	/* site logo */
+	#site-logo {
+		margin: 15px 100px 5px 0;
+		position: static;
+	}
+
+	/* site description */
+	#site-description {
+		margin: 0 0 15px;
+		position: static;
+	}
+
+	/* content */
+	#content {
+		width: auto;
+		float: none;
+		margin: 20px 0;
+	}
+
+	/* sidebar */
+	#sidebar {
+		width: 100%;
+		margin: 0;
+		float: none;
+	}
+	#sidebar .widget {
+		padding: 3% 4%;
+		margin: 0 0 10px;
+	}
+  
+  /* sidebar-flickr-left */
+  #sidebar-flickr-left {
+    display: none;
+  }
+	#sidebar-flickr-left.widget {
+    display: none;
+	}  
+  
+    /* sidebar-flickr-bottom */
+  #sidebar-flickr-bottom {
+    width: 100%;
+    margin: 0;
+    float: none;
+    display: inline;
+  }
+	#sidebar-flickr-bottom.widget {
+		padding: 3% 4%;
+		margin: 0 0 10px;
+    display: inline;
+	}  
+
+	/* embedded videos */
+	.video embed,
+	.video object,
+	.video iframe {
+		min-height: 250px;
+	}
+
+}
+
+/************************************************************************************
+smaller than 480
+*************************************************************************************/
+@media screen and (max-width: 480px) {
+
+	/* disable webkit text size adjust (for iPhone) */
+	html {
+		-webkit-text-size-adjust: none;
+	}
+
+	/* main nav */
+	#main-nav a {
+		font-size: 90%;
+		padding: 10px 8px;
+	}
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
+}
