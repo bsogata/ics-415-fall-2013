@@ -71,33 +71,24 @@ function getClasses(elem)
     
     // If error messages are already present, then remove the messages
     // and reset the background colors for all text fields
-    if (document.getElementsByTagName("p").length > 0)
+    if (document.getElementsByClassName("error").length > 0)
     {
-      p = document.getElementsByTagName("p")[0];
-      ul = document.getElementsByTagName("ul")[0];
-      body.removeChild(p);
-      body.removeChild(ul);
+      errors = document.getElementsByClassName("error");
+
+      for (var i = errors.length - 1; i >= 0; i--)
+      {
+        body.removeChild(errors[i]);
+      }
       
-      if (username.getAttribute("style") != null)
-      {
-        username.setAttribute("style", "");
-      }
-      if (email.getAttribute("style") != null)
-      {
-        email.setAttribute("style", "");
-      }
-      if (password.getAttribute("style") != null)
-      {
-        password.setAttribute("style", "");
-      }
-      if (confirm.getAttribute("style") != null)
-      {
-        confirm.setAttribute("style", "");
-      }
-    } 
+      username.setAttribute("style", username.getAttribute("style").replace("background-color: red", ""));
+      email.setAttribute("style", email.getAttribute("style").replace("background-color: red", ""));
+      password.setAttribute("style", password.getAttribute("style").replace("background-color: red", ""));
+      confirm.setAttribute("style", confirm.getAttribute("style").replace("background-color: red", ""));
+    }
     
     warning = document.createElement("p");
-    warning.textContent = "Error: ";;
+    warning.textContent = "Error: ";
+    addClass(warning, "error");
     body.insertBefore(warning, form);
     
     message = "";
@@ -131,6 +122,7 @@ function getClasses(elem)
     
     errors = message.split("\n");
     ul = document.createElement("ul");
+    addClass(ul, "error");
     body.insertBefore(ul, form);
     
     for (var i = 0; i < errors.length; i++)
