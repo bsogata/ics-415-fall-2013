@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0">
+  <title>Demo: Adaptive Design With Media Queries</title>
+
+  <!-- main css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
+  <!-- html5.js for IE less than 9 -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <script src="js/bootstrap.min.js"></script>
+  
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <!-- Title -->
+    <div class="page-header">
+      <h1>
+        Demo 
+        <br />
+        <small>Site Description</small>
+      </h1>
+    </div>
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Themify</a></li>
+          <li><a href="#">IconDock</a></li>
+          <li><a href="#">N.Design</a></li>
+        </ul>
+      </div>
+      <div class="search-bar">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Left Flickr sidebar -->
+    <aside class="sidebar-flickr-left hidden-xs hidden-sm">
+      <div class="panel panel-default">
+        <div class="panel panel-heading">
+          <h4>Flickr</h4>
+        </div>
+        <div class="panel body">
+          <!-- 
+            The layout of the images within this div is different from the original despite being an exact copy of the JavaScript call;
+            this developer assumes that the tutorial JavaScript is designed to handle the Flickr input better.
+          -->
+          <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8.&display=latest&size=s&layout=x&source=user&user=52839779@N02"></script> 
+        </div>
+      </div>
+    </aside>
+    
+    <!-- Main area -->
+    <section class="main">
+      <div class="panel panel-default">
+
+        <div class="panel panel-heading">
+          <h1 class="post-title"><a href="#">Just a Post Title</a></h1>
+        </div>
+        <p>May 8, 2011 <em>in</em> <a href="#">Category</a></p>
+
+        <div class="media">
+          <img class="media-object" src="images/sample-image.jpg" /> 
+        </div>
+        <div class="panel body">
+          <p>Fusce ut sem est. In eu sagittis felis. In gravida arcu ut neque ornare vitae rutrum turpis vehicula. Nunc ultrices sem mollis metus rutrum non malesuada metus fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque interdum rutrum quam, a pharetra est pulvinar ac. Vestibulum congue nisl magna. Ut vulputate odio id dui convallis in adipiscing libero condimentum. Nunc et pharetra enim. Praesent pharetra, neque et luctus tempor, leo sapien faucibus leo, a dignissim turpis ipsum sed libero. Sed sed luctus purus. Aliquam faucibus turpis at libero consectetur euismod. Nam nunc lectus, congue non egestas quis, condimentum ut arcu. Nulla placerat, tortor non egestas rutrum, mi turpis adipiscing dui, et mollis turpis tortor vel orci. Cras a fringilla nunc. Suspendisse volutpat, eros congue scelerisque iaculis, magna odio sodales dui, vitae vulputate elit metus ac arcu. Mauris consequat rhoncus dolor id sagittis. Cras tortor elit, aliquet quis tincidunt eget, dignissim non tortor.</p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Right sidebar -->
+    <aside class="sidebar">
+
+      <div class="panel panel-default">
+        <div class="panel panel-heading">
+          <h4>Sidebar</h4>
+        </div>
+        <div class="panel body">
+          <ul>
+            <li><a href="#">WordPress</a> (3)</li>
+            <li><a href="#">Design</a> (23)</li>
+            <li><a href="#">Design </a>(18)</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    
+    
+    <!-- Bottom Flickr sidebar -->
+    <aside class="sidebar-flickr-bottom hidden-md hidden-lg">
+      <div class="panel panel-default">
+        <div class="panel panel-heading">
+          <h4>Flickr</h4>
+        </div>
+        <div class="panel body">
+          <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8.&display=latest&size=s&layout=x&source=user&user=52839779@N02"></script> 
+        </div>
+      </div>
+    </aside>
+    
+  </div>  
+</body>
+</html>
